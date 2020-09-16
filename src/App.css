@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap');
+
 .app {
   text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
-
-
-*{
+* {
   outline: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-
-button:focus {outline:0;}
+button:focus {
+  outline: 0;
+}

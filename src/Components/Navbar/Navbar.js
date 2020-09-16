@@ -40,7 +40,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link navbar__textHover" to="/#">
+              <Link className="nav-link navbar__textHover" to="/booking">
                 Destination
               </Link>
             </li>
