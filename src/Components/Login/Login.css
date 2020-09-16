@@ -1,68 +1,87 @@
-
-
 .login__inputBtn {
-    padding: 20px 35%;
-    color: black;
-    font-weight: bold;
-    background-color: #F9A51A;
-    border: none;
-    outline: none;
-    margin-bottom: 30px;
+  padding: 20px 35%;
+  color: black;
+  font-weight: bold;
+  background-color: #f9a51a;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
 }
 .col-md-8 {
-    margin: 50px 0px 50px 0px;
+  margin: 50px 0px 50px 0px;
 }
 hr.login__left {
-    width: 150%;
-    border: 1px solid lightgray;
+  width: 150%;
+  border: 1px solid lightgray;
 }
 .login__right {
-    width: 150%;
-    border: 1px solid lightgray;
+  width: 150%;
+  border: 1px solid lightgray;
 }
-.login__rightLeft{
-    margin-left: -14% !important;
-
+.login__rightLeft {
+  margin-left: -14% !important;
 }
 .login__faceBook__google {
-    margin: 10px 100px 10px 100px;
+  margin: 10px 100px 10px 100px;
 }
 
-.login__inputBtn:hover{
-    background-color: #F9A51A;
-
+.login__inputBtn:hover {
+  background-color: #f9a51a;
 }
-.login__inputBtn:focus{
-    background-color: #F9A51A;
-    outline: none;
-    box-shadow: none;
+.login__inputBtn:focus {
+  background-color: #f9a51a;
+  outline: none;
+  box-shadow: none;
 }
-.__login{
-    border: 1px solid black;
-    padding: 50px;
+.__login {
+  border: 1px solid black;
+  padding: 50px;
 }
 
-.login__input:focus{
-    border-color: none !important;
+.row.login__or {
+  margin: 0px 50px;
+}
 
+.login__input:focus {
+  border-color: none !important;
 }
 .login__input {
-    height: 65px;
-    background-color:#fff !important;
-    border: none;
-    outline : none;
+  height: 65px;
+  background-color: #fff !important;
+  border: none;
+  outline: none;
 }
 
-.login__input::placeholder{
-    color: #000 !important;
+.login__input::placeholder {
+  color: #000 !important;
 }
 
 .login__input {
-    background-color: #fff !important;
-    border-bottom: 1px solid black !important;
-    
+  background-color: #fff !important;
+  border-bottom: 1px solid black !important;
 }
 
-.__login input.form-control:focus{
-    box-shadow: none !important;
+.__login input.form-control:focus {
+  box-shadow: none !important;
+}
+
+.login__fb {
+  height: 60px;
+}
+
+.login__facebook {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+img.login__fb {
+  position: relative;
+  left: -100px;
+}
+
+span.login__google {
+  margin-right: 30px;
 }

@@ -6,6 +6,9 @@ import "firebase/auth";
 import { useHistory, useLocation } from "react-router-dom";
 import firebaseConfig from "../../Firebase.config";
 
+import fb from "../Resources/Icon/fb.png";
+import google from "../Resources/Icon/google.png";
+
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
@@ -205,8 +208,8 @@ const Login = () => {
               </span>
             </div>
           </form>
-          <div className="login__faceBook__google">
-            <div className="row">
+          <div className="login__or">
+            <div className="row login__or">
               <div className="col-md-4">
                 <hr className="login__left" />
               </div>
@@ -216,6 +219,20 @@ const Login = () => {
               <div className="col-md-4 login__rightLeft">
                 <hr className="login__right" />
               </div>
+            </div>
+          </div>
+          <div className="login__faceBook__google">
+            <div className="login__facebook">
+              {" "}
+              <img src={fb} alt="" className=" login__fb" />
+              <span>Continue with Facebook</span>
+            </div>
+          </div>
+          <div className="login__faceBook__google">
+            <div className="login__facebook">
+              {" "}
+              <img src={google} alt="" className=" login__fb" />
+              <span className="login__google">Continue with Google</span>
             </div>
           </div>
         </div>

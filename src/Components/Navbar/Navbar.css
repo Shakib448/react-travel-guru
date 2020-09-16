@@ -1,69 +1,67 @@
 img.img-fluid {
-    height: 40px;
-    filter: brightness(0) invert(1);
+  height: 40px;
+  filter: brightness(0) invert(1);
 }
 
 li.nav-item.active {
-    padding: 10px;
+  padding: 10px;
 }
 
 div#navbarSupportedContent {
-    padding: 25px;
+  padding: 25px;
 }
 
 form.form-inline.my-2.my-lg-0 {
-    padding: 0px 50px;
+  padding: 0px 50px;
 }
 
 .navbar__input {
-    padding: 0px 70px 0px 40px;
-    margin : -10px;
-    background: rgba(79,79,81, .5);
-    outline: 0;
-    color: white;
-    height: 50px;
+  padding: 0px 70px 0px 40px;
+  margin: -10px;
+  background: rgba(79, 79, 81, 0.5);
+  outline: 0;
+  color: white;
+  height: 50px;
 }
 .navbar__input:focus {
-    background: rgba(79,79,81, .5);
-    color: white;
-
+  background: rgba(79, 79, 81, 0.5);
+  color: white;
 }
 
 svg.MuiSvgIcon-root.navbar__icon {
-    position: absolute;
-    color : white;
+  position: absolute;
+  color: white;
 }
 
-::placeholder { 
-    color: white !important;
-    opacity: 1; 
-  }
+::placeholder {
+  color: white !important;
+  opacity: 1;
+}
 
 .navbar__active {
-    background-color :#F9A51A;
-    color: white !important;
-    font-weight : bold;
-    border-radius: 15px;
+  background-color: #f9a51a;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 15px;
 }
-.navbar__text{
-    color: white !important;
+.navbar__text {
+  color: white !important;
 }
 
-.navbar__activeHover{
-    font-weight: bold;
-    transition: 300ms;
-    margin-right: 10px;
+.navbar__activeHover {
+  font-weight: bold;
+  transition: 300ms;
+  margin-right: 10px;
 }
-.navbar__textHover{
-    color: white !important;
+.navbar__textHover {
+  color: white !important;
 }
 .navbar__textHover:hover {
-    color: black !important;
+  color: black !important;
 }
 
-
 .navbar__activeHover:hover {
-    background-color :#F9A51A ;
-    font-weight : bold;
-    border-radius: 15px;
+  background-color: #f9a51a;
+  font-weight: bold;
+  border-radius: 15px;
 }
