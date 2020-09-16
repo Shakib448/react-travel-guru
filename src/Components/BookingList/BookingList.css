@@ -1,0 +1,17 @@
+.bookingList__hr{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.bookingList__horizontalCard{
+    width: 100%;
+}
+
+.bookingList__horizontalCardText{
+    text-align: left;
+}
+
+.bookingList__details {
+    font-size: 15px;
+    color: #D5D5D5;
+}

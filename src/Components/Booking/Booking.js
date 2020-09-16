@@ -10,7 +10,7 @@ const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
   const selectionRange = {
