@@ -6,6 +6,7 @@ const bookingListData = [
   {
     title: "Light bright airy stylish apt & safe peaceful stay",
     img: img1,
+    id: 1,
     desc1: "4 guest 2 bedrooms 2 beds 2 baths",
     desc2: "Wifi Air conditional Kitchen",
     desc3: "Cancellation flexibility available",
@@ -15,6 +16,7 @@ const bookingListData = [
   {
     title: "Apartment in Lost Panorama",
     img: img2,
+    id: 2,
     desc1: "4 guest 2 bedrooms 2 beds 2 baths",
     desc2: "Wifi Air conditional Kitchen",
     desc3: "Cancellation flexibility available",
@@ -24,6 +26,7 @@ const bookingListData = [
   {
     title: "AR Lounge & Pool (r&r + b+B)",
     img: img3,
+    id: 3,
     desc1: "4 guest 2 bedrooms 2 beds 2 baths",
     desc2: "Wifi Air conditional Kitchen",
     desc3: "Cancellation flexibility available",

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./BookingList.css";
-import test from "../Resources/Image/Rectangle 27.png";
 import start from "../Resources/Icon/star_1_.png";
 import bookingListData from "../BookingListData/BookingListData";
 
 const BookingList = () => {
-  const [bookingList, setBookingList] = useState(bookingListData);
+  const [bookingList] = useState(bookingListData);
   console.log(bookingList);
 
   return (
@@ -17,37 +16,41 @@ const BookingList = () => {
           </div>
         </div>
         <div className="row ">
-          {bookingList.map((booking) => (
-            <div className="row col-md-12 mb-4">
-              <div className="col-md-3">
-                <img
-                  src={test}
-                  className="bookingList__horizontalCard"
-                  alt=""
-                />
-              </div>
-              <div className="col-md-3 bookingList__horizontalCardText">
-                <h6>Light bright airy stylish apt & safe peaceful stay</h6>
-                <div className="bookingList__details">
-                  <p>4 guest 2 bedrooms 2 beds 2 baths</p>
-                  <p>Wifi Air conditional Kitchen</p>
-                  <p>Cancellation flexibility available</p>
-                  <p>
-                    <img src={start} alt="" className="bookingList__icon" />
-                    <span className="bookingList__rating">4.9(20) </span>{" "}
-                    <span className="bookingList__money">$34/night</span>{" "}
-                    $167total
-                  </p>
+          {bookingList.map(
+            ({ title, img, desc1, desc2, desc3, rating, money, id }) => (
+              <div key={id} className="row col-md-12 mb-4">
+                <div className="col-md-3">
+                  <img
+                    src={img}
+                    className="bookingList__horizontalCard"
+                    alt=""
+                  />
+                </div>
+                <div className="col-md-3 bookingList__horizontalCardText">
+                  <h6>{title}</h6>
+                  <div className="bookingList__details">
+                    <p>{desc1}</p>
+                    <p>{desc2}</p>
+                    <p>{desc3}</p>
+                    <p>
+                      <img src={start} alt="" className="bookingList__icon" />
+                      <span className="bookingList__rating">
+                        {rating}{" "}
+                      </span>{" "}
+                      <span className="bookingList__money">${money}</span>{" "}
+                      $167total
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
 
         <div className="col-md-6 bookingList__googleMap">
           <iframe
             width="100%"
-            height="650"
+            height="670"
             frameBorder="0"
             scrolling="no"
             marginHeight="0"
