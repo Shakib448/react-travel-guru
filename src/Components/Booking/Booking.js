@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./Booking.css";
-import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { Button } from "@material-ui/core";
+import { useForm } from "react-hook-form";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   const selectionRange = {
     startDate: startDate,
@@ -40,19 +44,71 @@ const Booking = () => {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-6 booking__detailsForm">
-            {showSearch && (
-              <DateRangePicker
-                ranges={[selectionRange]}
-                onChange={handleSelect}
-              />
-            )}
-            <Button
-              onClick={() => setShowSearch(!showSearch)}
-              className="banner__searchButton"
-              variant="outlined"
-            >
-              {showSearch ? "Hide" : "Search Dates"}
-            </Button>
+            <form onSubmit={handleSubmit(onSubmit)} className="booking__date">
+              <div className="form-group" style={{ textAlign: "left" }}>
+                <h4>Origin</h4>
+                <input
+                  name="origin"
+                  placeholder="City where you live"
+                  className="form-control booking__input"
+                  ref={register({
+                    required: "Please select your area",
+                    minLength: {
+                      value: 5,
+                      message: "Area details should be 5 characters",
+                    },
+                  })}
+                />
+                <br />
+                <span style={{ color: "red" }}>
+                  {errors.origin && errors.origin.message}
+                </span>
+              </div>
+              <div className="form-group" style={{ textAlign: "left" }}>
+                <h4>Destination</h4>
+                <input
+                  name="destination"
+                  placeholder="Your destination"
+                  className="form-control booking__input"
+                  ref={register({
+                    required: "Please write your destination",
+                    minLength: {
+                      value: 5,
+                      message: "Destination details should be 5 characters",
+                    },
+                  })}
+                />{" "}
+                <br />
+                <span style={{ color: "red" }}>
+                  {errors.destination && errors.destination.message}
+                </span>
+              </div>
+              <div className="text-left">
+                {showSearch && (
+                  <DateRangePicker
+                    ranges={[selectionRange]}
+                    onChange={handleSelect}
+                  />
+                )}
+                <Button
+                  onClick={() => setShowSearch(!showSearch)}
+                  className="booking__dateBtn"
+                  variant="outlined"
+                >
+                  {showSearch ? "Hide" : "Travel Dates"}
+                </Button>
+              </div>
+              <br />
+              {showSearch && (
+                <div style={{ textAlign: "center" }}>
+                  <input
+                    className="btn btn-primary booking__submitBtn"
+                    type="submit"
+                    value="Start Booking"
+                  />
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
