@@ -74,9 +74,9 @@ const Login = () => {
   return (
     <div className="login container">
       <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col-md-6 __login">
-          <form onSubmit={handleSubmit(onSubmit)} className="m-4">
+        <div className="col-md-2"></div>
+        <div className="col-md-8 ">
+          <form onSubmit={handleSubmit(onSubmit)} className="m-4 __login">
             <h5> {newUserInfo ? " Create a new account?" : "Log in"} </h5>
             <hr />
             {newUserInfo && (
@@ -189,20 +189,26 @@ const Login = () => {
                 ))}
               <span
                 className="mt-4"
-                style={{ color: "red", marginTop: "20px", cursor: "pointer" }}
+                style={{
+                  color: "#F9A51A",
+                  marginTop: "20px",
+                  cursor: "pointer",
+                }}
                 onClick={() => setNewUserInfo(!newUserInfo)}
               >
                 <h4>
                   {" "}
                   {newUserInfo
-                    ? "Already I have a account"
+                    ? "Already  have an account?"
                     : "I have no account created?"}{" "}
                 </h4>
               </span>
             </div>
           </form>
+          <h1>sklfasdf</h1>
         </div>
-        <div className="col-md-3"></div>
+
+        <div className="col-md-2"></div>
       </div>
     </div>
   );
