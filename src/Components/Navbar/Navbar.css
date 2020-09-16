@@ -36,6 +36,7 @@ svg.MuiSvgIcon-root.navbar__icon {
 ::placeholder {
   color: white !important;
   opacity: 1;
+  font-size: 12px;
 }
 
 .navbar__active {

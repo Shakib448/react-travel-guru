@@ -1,6 +1,7 @@
 import React from "react";
 import "./BookingList.css";
 import test from "../Resources/Image/Rectangle 27.png";
+import start from "../Resources/Icon/star_1_.png";
 
 const BookingList = () => {
   return (
@@ -21,6 +22,11 @@ const BookingList = () => {
               <p>4 guest 2 bedrooms 2 beds 2 baths</p>
               <p>Wifi Air conditional Kitchen</p>
               <p>Cancellation flexibility available</p>
+              <p>
+                <img src={start} alt="" className="bookingList__icon" />
+                <span className="bookingList__rating">4.9(20) </span>{" "}
+                <span className="bookingList__money">$34/night</span> $167total
+              </p>
             </div>
           </div>
           <div className="col-md-6">
