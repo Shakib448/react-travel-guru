@@ -1,0 +1,20 @@
+img.img-fluid {
+    height: 40px;
+}
+
+li.nav-item.active {
+    padding: 10px;
+}
+
+form.form-inline.my-2.my-lg-0 {
+    padding: 0px 50px;
+}
+
+input.form-control.mr-sm-2 {
+    padding: 0px 70px 0px 40px;
+    margin : -10px;
+}
+
+svg.MuiSvgIcon-root.navbar__icon {
+    position: absolute;
+}
