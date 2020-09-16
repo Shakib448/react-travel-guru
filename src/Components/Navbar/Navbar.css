@@ -7,6 +7,10 @@ li.nav-item.active {
     padding: 10px;
 }
 
+div#navbarSupportedContent {
+    padding: 25px;
+}
+
 form.form-inline.my-2.my-lg-0 {
     padding: 0px 50px;
 }
@@ -14,12 +18,21 @@ form.form-inline.my-2.my-lg-0 {
 input.form-control.mr-sm-2 {
     padding: 0px 70px 0px 40px;
     margin : -10px;
+    background: rgba(79,79,81, .5);
+    outline: 0;
+    color: white;
+    height: 50px;
 }
 
 svg.MuiSvgIcon-root.navbar__icon {
     position: absolute;
+    color : white;
 }
 
+::placeholder { 
+    color: white !important;
+    opacity: 1; 
+  }
 
 .navbar__active {
     background-color :#F9A51A;
