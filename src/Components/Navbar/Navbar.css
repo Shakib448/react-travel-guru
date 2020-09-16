@@ -19,9 +19,6 @@ svg.MuiSvgIcon-root.navbar__icon {
     position: absolute;
 }
 
-.navbar{
-    padding : 20px;
-}
 
 .navbar__active {
     background-color :#F9A51A;
