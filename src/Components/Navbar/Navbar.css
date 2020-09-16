@@ -1,5 +1,6 @@
 img.img-fluid {
     height: 40px;
+    filter: brightness(0) invert(1);
 }
 
 li.nav-item.active {
