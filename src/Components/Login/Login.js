@@ -77,6 +77,8 @@ const Login = () => {
         <div className="col-md-3"></div>
         <div className="col-md-6 __login">
           <form onSubmit={handleSubmit(onSubmit)} className="m-4">
+            <h5> {newUserInfo ? " Create a new account?" : "Log in"} </h5>
+            <hr />
             {newUserInfo && (
               <div className="form-group" style={{ textAlign: "center" }}>
                 <input
@@ -87,7 +89,23 @@ const Login = () => {
                     required: "Name required",
                     minLength: {
                       value: 5,
-                      message: "Name should be 5 characters",
+                      message: "First Name should be 5 characters",
+                    },
+                  })}
+                />{" "}
+                <br />
+                <span style={{ color: "red" }}>
+                  {errors.fullName && errors.fullName.message}
+                </span>
+                <input
+                  name="lastName"
+                  className="form-control login__input"
+                  placeholder="Last Name"
+                  ref={register({
+                    required: "Name required",
+                    minLength: {
+                      value: 5,
+                      message: "Last name should be 5 characters",
                     },
                   })}
                 />{" "}
@@ -150,9 +168,9 @@ const Login = () => {
             </div>
             <div style={{ textAlign: "center" }}>
               <input
-                className="btn btn-primary"
+                className="btn btn-primary login__inputBtn"
                 type="submit"
-                value={newUserInfo ? "Sign up" : "Sing In"}
+                value={newUserInfo ? "Create an account" : "Login"}
               />
               <br />
               {(user.error && (
