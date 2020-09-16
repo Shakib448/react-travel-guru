@@ -31,3 +31,11 @@
     font-size: 16px;
     color: black;
 }
+
+.bookingList__googleMap {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 35%;
+    margin: 0px 31px;
+}
