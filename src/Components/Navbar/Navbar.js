@@ -34,28 +34,28 @@ const Navbar = () => {
                 aria-label="Search"
               />
             </form>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/#">
+            <li className="nav-item active navbar__activeHover">
+              <Link className="nav-link " to="/#">
                 News
               </Link>
             </li>
-            <li className="nav-item active">
+            <li className="nav-item active navbar__activeHover">
               <Link className="nav-link" to="/#">
                 Destination
               </Link>
             </li>
-            <li className="nav-item active">
+            <li className="nav-item active navbar__activeHover">
               <Link className="nav-link" to="/#">
                 Blog
               </Link>
             </li>
-            <li className="nav-item active">
+            <li className="nav-item active navbar__activeHover">
               <Link className="nav-link" to="/#">
                 Contact
               </Link>
             </li>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/#">
+            <li className="nav-item active navbar__active ">
+              <Link className="nav-link navbar__text" to="/#">
                 Login
               </Link>
             </li>
