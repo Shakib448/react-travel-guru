@@ -6,7 +6,7 @@ import SearchIcon from "@material-ui/icons/Search";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="navbar container">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <button
           className="navbar-toggler"
@@ -35,22 +35,22 @@ const Navbar = () => {
               />
             </form>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link " to="/#">
+              <Link className="nav-link navbar__textHover " to="/#">
                 News
               </Link>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link" to="/#">
+              <Link className="nav-link navbar__textHover" to="/#">
                 Destination
               </Link>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link" to="/#">
+              <Link className="nav-link navbar__textHover" to="/#">
                 Blog
               </Link>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link" to="/#">
+              <Link className="nav-link navbar__textHover" to="/#">
                 Contact
               </Link>
             </li>

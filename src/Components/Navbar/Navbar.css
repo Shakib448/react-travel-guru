@@ -19,6 +19,10 @@ svg.MuiSvgIcon-root.navbar__icon {
     position: absolute;
 }
 
+.navbar{
+    padding : 20px;
+}
+
 .navbar__active {
     background-color :#F9A51A;
     color: white !important;
@@ -34,6 +38,13 @@ svg.MuiSvgIcon-root.navbar__icon {
     transition: 300ms;
     margin-right: 10px;
 }
+.navbar__textHover{
+    color: white !important;
+}
+.navbar__textHover:hover {
+    color: black !important;
+}
+
 
 .navbar__activeHover:hover {
     background-color :#F9A51A ;
