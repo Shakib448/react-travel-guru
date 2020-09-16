@@ -1,0 +1,38 @@
+.deliveryDetails {
+    padding : 50px 0px;
+}
+
+input.btn.btn-primary {
+    padding: 20px 45%;
+    background-color: #F91944;
+    border-bottom: none;
+    outline: none;
+    margin-bottom: 30px;
+}
+.__login{
+    margin-top: 100px;
+}
+
+.login__input:focus{
+    border-color: none !important;
+}
+.login__input {
+    height: 65px;
+    background-color:#fff !important;
+    border: none;
+    outline : none;
+}
+
+.login__input::placeholder{
+    color: #000 !important;
+}
+
+.login__input {
+    background-color: #fff !important;
+    border-bottom: 1px solid black !important;
+    
+}
+
+.__login input.form-control:focus{
+    box-shadow: none !important;
+}

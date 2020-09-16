@@ -22,13 +22,13 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto ml-auto">
-            <Link className="navbar-brand" to="/#">
+            <Link className="navbar-brand" to="/">
               <img src={logo} alt="" className="img-fluid" />
             </Link>
-            <form className="form-inline my-2 my-lg-0">
+            <form className="form-inline my-2 my-lg-0 ">
               <SearchIcon className="navbar__icon" />
               <input
-                className="form-control mr-sm-2"
+                className="form-control mr-sm-2  navbar__input"
                 type="search"
                 placeholder="Search Your Destination"
                 aria-label="Search"
@@ -55,7 +55,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active navbar__active ">
-              <Link className="nav-link navbar__text" to="/#">
+              <Link className="nav-link navbar__text" to="/login">
                 Login
               </Link>
             </li>
