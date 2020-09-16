@@ -205,9 +205,20 @@ const Login = () => {
               </span>
             </div>
           </form>
-          <h1>sklfasdf</h1>
+          <div className="login__faceBook__google">
+            <div className="row">
+              <div className="col-md-4">
+                <hr className="login__left" />
+              </div>
+              <div className="col-md-4">
+                <h3>or</h3>
+              </div>
+              <div className="col-md-4 login__rightLeft">
+                <hr className="login__right" />
+              </div>
+            </div>
+          </div>
         </div>
-
         <div className="col-md-2"></div>
       </div>
     </div>

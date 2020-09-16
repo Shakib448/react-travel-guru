@@ -1,13 +1,31 @@
-.deliveryDetails {
-    padding : 50px 0px;
-}
+
 
 .login__inputBtn {
     padding: 20px 35%;
+    color: black;
+    font-weight: bold;
     background-color: #F9A51A;
     border: none;
     outline: none;
     margin-bottom: 30px;
+}
+.col-md-8 {
+    margin: 50px 0px 50px 0px;
+}
+hr.login__left {
+    width: 150%;
+    border: 1px solid lightgray;
+}
+.login__right {
+    width: 150%;
+    border: 1px solid lightgray;
+}
+.login__rightLeft{
+    margin-left: -14% !important;
+
+}
+.login__faceBook__google {
+    margin: 10px 100px 10px 100px;
 }
 
 .login__inputBtn:hover{
