@@ -5,10 +5,17 @@ import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
+  const history = useHistory();
+
+  const auth = () => {
+    history.push("/booking/list/");
+  };
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
@@ -102,6 +109,7 @@ const Booking = () => {
               {showSearch && (
                 <div style={{ textAlign: "center" }}>
                   <input
+                    onClick={() => auth()}
                     className="btn btn-primary booking__submitBtn"
                     type="submit"
                     value="Start Booking"

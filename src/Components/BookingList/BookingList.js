@@ -5,7 +5,6 @@ import bookingListData from "../BookingListData/BookingListData";
 
 const BookingList = () => {
   const [bookingList] = useState(bookingListData);
-  console.log(bookingList);
 
   return (
     <div className="bookDetails ">

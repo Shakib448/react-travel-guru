@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Login.css";
 import * as firebase from "firebase/app";
@@ -8,10 +8,12 @@ import firebaseConfig from "../../Firebase.config";
 
 import fb from "../Resources/Icon/fb.png";
 import google from "../Resources/Icon/google.png";
+import { UserLoggedIn } from "../../App";
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+  const [loggedIn, setLoggedIn] = useContext(UserLoggedIn);
   const { register, errors, handleSubmit, watch } = useForm({});
   const password = useRef({});
   password.current = watch("password", "");
@@ -20,14 +22,13 @@ const Login = () => {
 
   const [user, setUser] = useState({
     isSignedIn: false,
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
     error: "",
   });
-
-  console.log("This is user", user);
 
   let history = useHistory();
   let location = useLocation();
@@ -41,16 +42,17 @@ const Login = () => {
         .createUserWithEmailAndPassword(data.email, data.password)
         .then((res) => {
           const newUser = { ...user, email: data.email, name: data.name };
-          console.log("this newUser", newUser);
           newUser.error = "";
           newUser.success = true;
           setUser(newUser);
+          setLoggedIn(newUser);
         })
         .catch((error) => {
           const newUser = { ...user };
           newUser.error = error.message;
           newUser.success = false;
           setUser(newUser);
+          setLoggedIn(newUser);
         });
     }
 
@@ -63,12 +65,14 @@ const Login = () => {
           newUser.error = "";
           newUser.success = true;
           setUser(newUser);
+          setLoggedIn(newUser);
           history.replace(from);
         })
         .catch((error) => {
           const newUser = { ...user };
           newUser.error = error.message;
           newUser.success = false;
+          setLoggedIn(newUser);
           setUser(newUser);
         });
     }
@@ -87,9 +91,9 @@ const Login = () => {
                 <input
                   name="fullName"
                   className="form-control login__input"
-                  placeholder="Full Name"
+                  placeholder="First Name"
                   ref={register({
-                    required: "Name required",
+                    required: "First name required",
                     minLength: {
                       value: 5,
                       message: "First Name should be 5 characters",
@@ -105,7 +109,7 @@ const Login = () => {
                   className="form-control login__input"
                   placeholder="Last Name"
                   ref={register({
-                    required: "Name required",
+                    required: "Last name required",
                     minLength: {
                       value: 5,
                       message: "Last name should be 5 characters",
