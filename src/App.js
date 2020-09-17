@@ -7,6 +7,8 @@ import Login from "./Components/Login/Login";
 import Booking from "./Components/Booking/Booking";
 import BookingList from "./Components/BookingList/BookingList";
 import NotFound from "./Components/NotFound/NotFound";
+import Blog from "./Components/Blog/Blog";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/booking" component={Booking} />
           <Route exact path="/booking/list/" component={BookingList} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/contact" component={Contact} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Router>

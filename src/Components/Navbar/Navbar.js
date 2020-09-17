@@ -55,12 +55,17 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <NavLink className="nav-link navbar__textHover" to="/#">
+              <NavLink
+                exact
+                activeClassName="navbar__activeStyle"
+                className="nav-link navbar__textHover"
+                to="/blog"
+              >
                 Blog
               </NavLink>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <NavLink className="nav-link navbar__textHover" to="/#">
+              <NavLink className="nav-link navbar__textHover" to="/contact">
                 Contact
               </NavLink>
             </li>
