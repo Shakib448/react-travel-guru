@@ -1,5 +1,7 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import "./Home.css";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const Home = () => {
   return (
@@ -18,6 +20,9 @@ const Home = () => {
               tenetur corporis amet ratione repudiandae et neque labore fugit
               dolorem quo blanditiis voluptates vero magnam quam, unde
             </h6>
+            <Button className="home__btn" variant="contained">
+              Book Now <ArrowForwardIcon className="home__icon" />{" "}
+            </Button>
           </div>
         </div>
       </div>
