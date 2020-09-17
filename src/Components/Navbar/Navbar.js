@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Resources/Logo.png";
 import SearchIcon from "@material-ui/icons/Search";
@@ -22,9 +22,9 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto ml-auto">
-            <Link className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/">
               <img src={logo} alt="" className="img-fluid" />
-            </Link>
+            </NavLink>
             <form className="form-inline my-2 my-lg-0 ">
               <SearchIcon className="navbar__icon" />
               <input
@@ -35,29 +35,39 @@ const Navbar = () => {
               />
             </form>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link navbar__textHover " to="/#">
+              <NavLink
+                exact
+                activeClassName="navbar__activeStyle"
+                className="nav-link navbar__textHover "
+                to="/booking/list/"
+              >
                 News
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link navbar__textHover" to="/booking">
+              <NavLink
+                exact
+                activeClassName="navbar__activeStyle"
+                className="nav-link navbar__textHover"
+                to="/booking"
+              >
                 Destination
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link navbar__textHover" to="/#">
+              <NavLink className="nav-link navbar__textHover" to="/#">
                 Blog
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item active navbar__activeHover">
-              <Link className="nav-link navbar__textHover" to="/#">
+              <NavLink className="nav-link navbar__textHover" to="/#">
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item active navbar__active ">
-              <Link className="nav-link navbar__text" to="/login">
+              <NavLink className="nav-link navbar__text" to="/login">
                 Login
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

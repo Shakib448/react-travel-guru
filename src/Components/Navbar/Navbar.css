@@ -66,3 +66,9 @@ svg.MuiSvgIcon-root.navbar__icon {
   font-weight: bold;
   border-radius: 15px;
 }
+
+.navbar__activeStyle {
+  background: #f9a51a;
+  color: black !important;
+  padding: 10px;
+}
