@@ -27,6 +27,7 @@ function App() {
             <PrivateRoute exact path="/booking/list/">
               <BookingList />
             </PrivateRoute>
+
             {/* <Route exact path="/booking/list/" component={BookingList} /> */}
             <Route exact path="/blog" component={Blog} />
             <Route exact path="/contact" component={Contact} />

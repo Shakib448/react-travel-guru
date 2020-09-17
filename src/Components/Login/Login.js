@@ -30,6 +30,56 @@ const Login = () => {
     error: "",
   });
 
+  //Facebook
+  const providerFB = new firebase.auth.FacebookAuthProvider();
+  const handleFaceBookSignIn = () => {
+    firebase
+      .auth()
+      .signInWithPopup(providerFB)
+      .then((res) => {
+        const { email, displayName } = res.user;
+
+        const singedInUser = {
+          isSignIn: true,
+          name: displayName,
+          email: email,
+        };
+        console.log("facebook", singedInUser);
+
+        setLoggedIn(singedInUser);
+        history.replace(from);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // Google
+  const providerGG = new firebase.auth.GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    firebase
+      .auth()
+      .signInWithPopup(providerGG)
+      .then((res) => {
+        // console.log("Google", res);
+        const { email, displayName } = res.user;
+
+        const singedInUser = {
+          isSignIn: true,
+          name: displayName,
+          email: email,
+        };
+        console.log("Google", singedInUser);
+
+        setLoggedIn(singedInUser);
+        history.replace(from);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  //Location
   let history = useHistory();
   let location = useLocation();
 
@@ -118,7 +168,7 @@ const Login = () => {
                 />{" "}
                 <br />
                 <span style={{ color: "red" }}>
-                  {errors.fullName && errors.fullName.message}
+                  {errors.lastName && errors.lastName.message}
                 </span>
               </div>
             )}
@@ -225,14 +275,17 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <div className="login__faceBook__google">
+          <div
+            onClick={handleFaceBookSignIn}
+            className="login__faceBook__google"
+          >
             <div className="login__facebook">
               {" "}
               <img src={fb} alt="" className=" login__fb" />
               <span>Continue with Facebook</span>
             </div>
           </div>
-          <div className="login__faceBook__google">
+          <div onClick={handleGoogleSignIn} className="login__faceBook__google">
             <div className="login__facebook">
               {" "}
               <img src={google} alt="" className=" login__fb" />
