@@ -47,19 +47,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-          {/* <div className="col-md-3">
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-              <Carousel.Item>
-                <img className="d-block w-100" src={img} alt="First slide" />
-                <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
-          </div> */}
         </div>
       </div>
     </div>
