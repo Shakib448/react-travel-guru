@@ -44,7 +44,7 @@ const Login = () => {
           name: displayName,
           email: email,
         };
-        console.log("facebook", singedInUser);
+        // console.log("facebook", singedInUser);
 
         setLoggedIn(singedInUser);
         history.replace(from);

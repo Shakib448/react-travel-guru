@@ -1,4 +1,6 @@
-import img1 from "../Resources/Image/Rectangle 1.png";
+import img1 from "../Resources/Image/Sajek.png";
+import img2 from "../Resources/Image/Sreemongol.png";
+import img3 from "../Resources/Image/sundorbon.png";
 
 const BookData = [
   {
@@ -9,12 +11,12 @@ const BookData = [
   {
     id: 2,
     title: "SREEMANGAL",
-    img: img1,
+    img: img2,
   },
   {
     id: 3,
     title: "SUNDARBANS",
-    img: img1,
+    img: img3,
   },
 ];
 

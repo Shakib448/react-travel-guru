@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import "./Home.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import BookData from "../BookData/BookData";
-import { Carousel } from "react-bootstrap";
+// import { Carousel } from "react-bootstrap";
 import img from "../Resources/Image/Sajek.png";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
   const [index, setIndex] = useState(0);
+
+  const [choices, setChoices] = useState(false);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -32,6 +34,18 @@ const Home = () => {
             <Button className="home__btn" variant="contained">
               Book Now <ArrowForwardIcon className="home__icon" />{" "}
             </Button>
+          </div>
+          <div className="col-md-12 home__choices">
+            {bookData.map(({ title, img, id }) => (
+              <div class="card-group home__choiceData">
+                <div class="card text-white">
+                  <img class="card-img-top" src={img} alt="Card image top" />
+                  <div class="card-img-overlay">
+                    <h4 class="card-subtitle">{title}</h4>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
           {/* <div className="col-md-3">
             <Carousel activeIndex={index} onSelect={handleSelect}>
