@@ -49,6 +49,7 @@
   position: absolute;
   left: 50%;
   top: 30%;
+  cursor: pointer;
 }
 
 .home__choiceData {

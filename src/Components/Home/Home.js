@@ -8,13 +8,7 @@ import img from "../Resources/Image/Sajek.png";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
-  const [index, setIndex] = useState(0);
 
-  const [choices, setChoices] = useState(false);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
   return (
     <div className="home">
       <div className="container">
