@@ -3,23 +3,29 @@ import React, { useState } from "react";
 import "./Home.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import BookData from "../BookData/BookData";
+import { Link, useHistory } from "react-router-dom";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
 
-  const [test, setTest] = useState("Find your Destiny");
+  const [title, setTitle] = useState("Find your Destiny");
 
   const [routeId, setRouteId] = useState([]);
 
-  console.log(test.title);
-
   const handleTitle = (title) => {
     const newTitle = [title];
-    setTest(newTitle);
+    setTitle(newTitle);
   };
   const handleId = (id) => {
     const newId = [id];
     setRouteId(newId);
+  };
+
+  const history = useHistory();
+
+  const bookingDetailRoute = () => {
+    const url = `/booking/${routeId}`;
+    history.push(url);
   };
 
   return (
@@ -27,7 +33,7 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-5 home__content ">
-            <h1> {test} </h1>
+            <h1> {title} </h1>
             <h6>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               voluptatum eum sit, similique ut provident ex, quo rem, sint
@@ -38,8 +44,12 @@ const Home = () => {
               tenetur corporis amet ratione repudiandae et neque labore fugit
               dolorem quo blanditiis voluptates vero magnam quam, unde
             </h6>
-            <Button className="home__btn" variant="contained">
-              Book Now {routeId} <ArrowForwardIcon className="home__icon" />{" "}
+            <Button
+              onClick={() => bookingDetailRoute(routeId)}
+              className="home__btn"
+              variant="contained"
+            >
+              Book Now <ArrowForwardIcon className="home__icon" />{" "}
             </Button>
           </div>
           <div className="col-md-12 home__choices">

@@ -23,7 +23,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/booking" component={Booking} />
+            <Route exact path="/booking/:routeId" component={Booking} />
             <PrivateRoute exact path="/booking/list/">
               <BookingList />
             </PrivateRoute>
