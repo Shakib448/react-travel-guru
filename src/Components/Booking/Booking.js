@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Booking.css";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import BookData from "../BookData/BookData";
 
 const Booking = () => {
+  let { routeId } = useParams();
+  const individual = BookData.find((data) => data.id == routeId);
+
+  const [bookingData, setBookingData] = useState([]);
+
+  useEffect(() => {
+    setBookingData(individual);
+  }, [individual]);
+
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
@@ -32,12 +42,13 @@ const Booking = () => {
   }
 
   const [showSearch, setShowSearch] = useState(false);
+
   return (
     <div className="booking ">
       <div className="container">
         <div className="row">
           <div className="col-md-5 booking__details ">
-            <h1>Coxes Bazar</h1>
+            <h3> {bookingData.title} </h3>
             <h6>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               voluptatum eum sit, similique ut provident ex, quo rem, sint
@@ -49,7 +60,8 @@ const Booking = () => {
               dolorem quo blanditiis voluptates vero magnam quam, unde
             </h6>
           </div>
-          <div className="col-md-7 booking__detailsForm">
+          <div className="col-md-1"></div>
+          <div className="col-md-6 booking__detailsForm">
             <form onSubmit={handleSubmit(onSubmit)} className="booking__date">
               <div className="form-group" style={{ textAlign: "left" }}>
                 <h4>Origin</h4>
@@ -74,7 +86,7 @@ const Booking = () => {
                 <h4>Destination</h4>
                 <input
                   name="destination"
-                  placeholder="Your destination"
+                  value={bookingData.title}
                   className="form-control booking__input"
                   ref={register({
                     required: "Please write your destination",
@@ -99,15 +111,16 @@ const Booking = () => {
                 <Button
                   onClick={() => setShowSearch(!showSearch)}
                   className="booking__dateBtn"
+                  variant="outlined"
                 >
-                  {showSearch ? null : "Travel Dates"}
+                  {showSearch ? "Hide" : "Travel Dates"}
                 </Button>
               </div>
               <br />
               {showSearch && (
                 <div style={{ textAlign: "center" }}>
                   <input
-                    onClick={() => auth()}
+                    onClick={auth}
                     className="btn btn-primary booking__submitBtn"
                     type="submit"
                     value="Start Booking"

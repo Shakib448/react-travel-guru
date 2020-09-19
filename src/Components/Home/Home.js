@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import BookData from "../BookData/BookData";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
