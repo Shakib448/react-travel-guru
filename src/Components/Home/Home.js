@@ -3,18 +3,26 @@ import React, { useState } from "react";
 import "./Home.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import BookData from "../BookData/BookData";
-// import { Carousel } from "react-bootstrap";
 import img from "../Resources/Image/Sajek.png";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
+
+  const [test, setTest] = useState("Find your Destiny");
+
+  console.log(test.title);
+
+  const handleTest = (d) => {
+    const newTest = [d];
+    setTest(newTest);
+  };
 
   return (
     <div className="home">
       <div className="container">
         <div className="row">
           <div className="col-md-5 home__content ">
-            <h1>Coxes Bazar</h1>
+            <h1> {test} </h1>
             <h6>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               voluptatum eum sit, similique ut provident ex, quo rem, sint
@@ -31,11 +39,19 @@ const Home = () => {
           </div>
           <div className="col-md-12 home__choices">
             {bookData.map(({ title, img, id }) => (
-              <div class="card-group home__choiceData">
-                <div class="card text-white">
-                  <img class="card-img-top" src={img} alt="Card image top" />
-                  <div class="card-img-overlay">
-                    <h4 class="card-subtitle">{title}</h4>
+              <div
+                kye={id}
+                onClick={() => handleTest(title)}
+                className="card-group home__choiceData"
+              >
+                <div className="card text-white">
+                  <img
+                    className="card-img-top"
+                    src={img}
+                    alt="Card image top"
+                  />
+                  <div className="card-img-overlay">
+                    <h4 className="card-subtitle">{title}</h4>
                   </div>
                 </div>
               </div>
