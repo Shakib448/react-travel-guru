@@ -23,7 +23,7 @@ const BookingList = () => {
         <div className="row ">
           <div className="col-md-12 bookingList__hr">
             <hr />
-            <h1> {finalBookData.title} </h1>
+            <h1 className="text-left"> {finalBookData.title} </h1>
           </div>
         </div>
         <div className="row ">
