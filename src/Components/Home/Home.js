@@ -16,8 +16,8 @@ const Home = () => {
     const newTitle = [title];
     setTitle(newTitle);
   };
-  const handleId = (id) => {
-    const newId = [id];
+  const handleId = (routeId) => {
+    const newId = [routeId];
     setRouteId(newId);
   };
 

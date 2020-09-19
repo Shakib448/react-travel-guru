@@ -23,8 +23,8 @@ const Booking = () => {
 
   const history = useHistory();
 
-  const auth = () => {
-    history.push("/booking/list/");
+  const auth = (routeId) => {
+    history.push(`/booking/list/${routeId}`);
   };
 
   const { register, handleSubmit, errors } = useForm();
@@ -48,7 +48,7 @@ const Booking = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-5 booking__details ">
-            <h3> {bookingData.title} </h3>
+            <h1> {bookingData.title} </h1>
             <h6>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               voluptatum eum sit, similique ut provident ex, quo rem, sint
@@ -120,7 +120,7 @@ const Booking = () => {
               {showSearch && (
                 <div style={{ textAlign: "center" }}>
                   <input
-                    onClick={auth}
+                    onClick={() => auth(routeId)}
                     className="btn btn-primary booking__submitBtn"
                     type="submit"
                     value="Start Booking"

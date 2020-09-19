@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BookingList.css";
 import start from "../Resources/Icon/star_1_.png";
 import bookingListData from "../BookingListData/BookingListData";
+import BookData from "../BookData/BookData";
+import { useParams } from "react-router-dom";
 
 const BookingList = () => {
   const [bookingList] = useState(bookingListData);
+
+  let { routeId } = useParams();
+  const finalBook = BookData.find((data) => data.id == routeId);
+
+  const [finalBookData, setFinalBookData] = useState([]);
+
+  useEffect(() => {
+    setFinalBookData(finalBook);
+  }, [finalBook]);
 
   return (
     <div className="bookDetails ">
@@ -12,6 +23,7 @@ const BookingList = () => {
         <div className="row ">
           <div className="col-md-12 bookingList__hr">
             <hr />
+            <h1> {finalBookData.title} </h1>
           </div>
         </div>
         <div className="row ">

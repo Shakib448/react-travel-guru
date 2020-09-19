@@ -23,12 +23,13 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
+
             <Route exact path="/booking/:routeId" component={Booking} />
-            <PrivateRoute exact path="/booking/list/">
+
+            <PrivateRoute exact path="/booking/list/:routeId">
               <BookingList />
             </PrivateRoute>
 
-            {/* <Route exact path="/booking/list/" component={BookingList} /> */}
             <Route exact path="/blog" component={Blog} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="*" component={NotFound} />
