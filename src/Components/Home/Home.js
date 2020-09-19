@@ -9,11 +9,17 @@ const Home = () => {
 
   const [test, setTest] = useState("Find your Destiny");
 
+  const [routeId, setRouteId] = useState([]);
+
   console.log(test.title);
 
-  const handleTest = (d) => {
-    const newTest = [d];
-    setTest(newTest);
+  const handleTitle = (title) => {
+    const newTitle = [title];
+    setTest(newTitle);
+  };
+  const handleId = (id) => {
+    const newId = [id];
+    setRouteId(newId);
   };
 
   return (
@@ -33,14 +39,17 @@ const Home = () => {
               dolorem quo blanditiis voluptates vero magnam quam, unde
             </h6>
             <Button className="home__btn" variant="contained">
-              Book Now <ArrowForwardIcon className="home__icon" />{" "}
+              Book Now {routeId} <ArrowForwardIcon className="home__icon" />{" "}
             </Button>
           </div>
           <div className="col-md-12 home__choices">
             {bookData.map(({ title, img, id }) => (
               <div
                 kye={id}
-                onClick={() => handleTest(title)}
+                onClick={() => {
+                  handleTitle(title);
+                  handleId(id);
+                }}
                 className="card-group home__choiceData"
               >
                 <div className="card text-white">
