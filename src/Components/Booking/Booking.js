@@ -100,7 +100,6 @@ const Booking = () => {
                 <Button
                   onClick={() => setShowSearch(!showSearch)}
                   className="booking__dateBtn"
-                  variant="outlined"
                 >
                   {showSearch ? "Hide" : "Travel Dates"}
                 </Button>
