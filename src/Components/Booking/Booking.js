@@ -49,8 +49,7 @@ const Booking = () => {
               dolorem quo blanditiis voluptates vero magnam quam, unde
             </h6>
           </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-6 booking__detailsForm">
+          <div className="col-md-7 booking__detailsForm">
             <form onSubmit={handleSubmit(onSubmit)} className="booking__date">
               <div className="form-group" style={{ textAlign: "left" }}>
                 <h4>Origin</h4>
@@ -101,7 +100,7 @@ const Booking = () => {
                   onClick={() => setShowSearch(!showSearch)}
                   className="booking__dateBtn"
                 >
-                  {showSearch ? "Hide" : "Travel Dates"}
+                  {showSearch ? null : "Travel Dates"}
                 </Button>
               </div>
               <br />

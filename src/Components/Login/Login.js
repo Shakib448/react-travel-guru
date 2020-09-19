@@ -47,7 +47,7 @@ const Login = () => {
         // console.log("facebook", singedInUser);
 
         setLoggedIn(singedInUser);
-        history.replace(from);
+        history.replace(from); /// it's not work I tried and I also joined sessions I also follow the instruction but it didn't work
       })
       .catch((error) => {
         console.log(error);
@@ -69,10 +69,9 @@ const Login = () => {
           name: displayName,
           email: email,
         };
-        console.log("Google", singedInUser);
 
         setLoggedIn(singedInUser);
-        history.replace(from);
+        history.replace(from); /// it's not work I tried and I also joined sessions I also follow the instruction but it didn't work
       })
       .catch((err) => {
         console.log(err);

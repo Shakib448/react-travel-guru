@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./Home.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import BookData from "../BookData/BookData";
-import img from "../Resources/Image/Sajek.png";
 
 const Home = () => {
   const [bookData, setBookData] = useState(BookData);
