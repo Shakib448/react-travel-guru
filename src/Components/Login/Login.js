@@ -44,10 +44,9 @@ const Login = () => {
           name: displayName,
           email: email,
         };
-        // console.log("facebook", singedInUser);
 
         setLoggedIn(singedInUser);
-        history.replace(from); /// it's not work I tried and I also joined sessions I also follow the instruction but it didn't work
+        history.replace(from);
       })
       .catch((error) => {
         console.log(error);
@@ -61,7 +60,6 @@ const Login = () => {
       .auth()
       .signInWithPopup(providerGG)
       .then((res) => {
-        // console.log("Google", res);
         const { email, displayName } = res.user;
 
         const singedInUser = {
@@ -71,7 +69,7 @@ const Login = () => {
         };
 
         setLoggedIn(singedInUser);
-        history.replace(from); /// it's not work I tried and I also joined sessions I also follow the instruction but it didn't work
+        history.replace(from);
       })
       .catch((err) => {
         console.log(err);
